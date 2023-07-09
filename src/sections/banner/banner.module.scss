@@ -24,26 +24,40 @@
     left: 50%;
     transform: translate(-50%, -50%);
     > h1 {
-      font-size: 45px;
+      font-size: 40px;
       font-family: var(--secondary-font);
       font-weight: 400;
       text-align: center;
       color: rgb(30, 30, 30);
     }
     > p {
-      font-size: 15px;
+      font-size: 14px;
       color: #0005;
-      margin-top: 10px;
+      width: 300px;
+      margin: 10px auto 0;
+      text-align: center;
     }
   }
 }
 
-
-.circleImage{
+.circleImage {
   position: absolute;
-  min-height: 750px;
-  min-width: 750px;
+  min-height: 700px;
+  min-width: 700px;
   height: 90%;
   width: 90%;
   z-index: 10;
+  animation: rotation 25s infinite linear;
+}
+.profileImage{
+  height: 400px;
+  width: 400px;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

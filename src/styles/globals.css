@@ -66,14 +66,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 body::-webkit-scrollbar {
-  width: 5px;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: #fff5;
-  border-radius: 3px;
-}
-body::-webkit-scrollbar-track {
-  background-color: #141414;
+  display: none;
 }
 
 a {

@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import style from './about.module.scss';
+import style from "./contact.module.scss";
 
-const About = () => {
+const Contact = () => {
   const [ref, inView] = useInView({
-    triggerOnce: true, // Animation triggers only once
-    threshold: 0.2, // Percentage of the section visible to trigger animation
+    triggerOnce: true,
+    threshold: 0.5,
   });
 
   const animationVariants = {
@@ -24,17 +24,17 @@ const About = () => {
   };
 
   return (
-    <div className={style.aboutSection} id="about">
+    <div className={style.contactSection} id="contact">
       <motion.section
         ref={ref}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={animationVariants}
       >
-        <h1>Welcome to About section</h1>
+        <h1>Welcome to Contact section</h1>
       </motion.section>
     </div>
   );
 };
 
-export default About;
+export default Contact;

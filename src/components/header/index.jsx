@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./header.module.scss";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -9,13 +10,15 @@ function Header() {
           <h2>Dhara</h2>
         </div>
         <ul className={style.links}>
-          <li className={style.active}>Home</li>
-          <li>About</li>
-          <li>Experience</li>
-          <li>Resume</li>
-          <li>Contact</li>
+          <Link href={"/#home"} className={style.active}>
+            Home
+          </Link>
+          <Link href={"/#about"}>About</Link>
+          <Link href={"/#experience"}>Experience</Link>
+          <Link href={"/#resume"}>Resume</Link>
+          <Link href={"/#contact"}>Contact</Link>
         </ul>
-        <button className={style['hire-me']}>Hire me</button>
+        <button className={style["hire-me"]}>Hire me</button>
       </div>
     </header>
   );
