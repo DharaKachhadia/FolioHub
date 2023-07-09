@@ -1,0 +1,49 @@
+.bannerSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primary-white);
+
+  .middleShadow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(
+      circle,
+      #fff8bd 0%,
+      rgba(255, 255, 255, 1) 40%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+  .infoContent {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    > h1 {
+      font-size: 45px;
+      font-family: var(--secondary-font);
+      font-weight: 400;
+      text-align: center;
+      color: rgb(30, 30, 30);
+    }
+    > p {
+      font-size: 15px;
+      color: #0005;
+      margin-top: 10px;
+    }
+  }
+}
+
+
+.circleImage{
+  position: absolute;
+  min-height: 750px;
+  min-width: 750px;
+  height: 90%;
+  width: 90%;
+  z-index: 10;
+}
